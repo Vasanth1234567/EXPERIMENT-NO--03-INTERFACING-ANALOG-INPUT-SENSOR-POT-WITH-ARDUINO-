@@ -68,7 +68,28 @@ CIRCUIT DIAGRAM
 
 **PROGRAM** 
  
+```
+int led=12;
+int potpin=A5;
+void setup()
+{
+  pinMode(potpin,INPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(9600);
+}
 
+void loop()
+{
+  int potentialmeasure = analogRead(A5);
+  Serial.println(potentialmeasure);
+  if(potentialmeasure>=650){
+    digitalWrite(led,HIGH);
+  }
+  else{
+    digitalWrite(led,LOW);
+  }
+}
+```
 
 
 
@@ -82,7 +103,14 @@ CIRCUIT DIAGRAM
 **
 
 
-[My image](username.github.com/repository/img/image.jpg)
+Before Simulation:
+
+![Before](https://user-images.githubusercontent.com/86919099/234003817-e988ae3d-9783-4cef-afb3-8ff49f8a7d3e.png)
+
+After Simulation:
+
+![After](https://user-images.githubusercontent.com/86919099/234003877-ff43e5c4-a308-42d0-a2a1-dc0682fe41c9.png)
+
 
 
 
